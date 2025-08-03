@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📝 Blog Platform – Frontend Developer Test
 
-## Getting Started
+This is a fully functional blog platform built as part of a frontend developer test using **Next.js**, with features including user authentication, post management (CRUD), protected routing, custom hooks, state management, pagination, and more.
 
-First, run the development server:
+---
+
+## 🚀 Tech Stack
+
+- **Framework:** [Next.js]
+- **State Management:** [Zustand]
+- **Auth:** JWT-based authentication (stored in `localStorage`)
+- **Styling:** [Tailwind CSS]
+- **Routing:** Next.js App Router
+- **API:** [JSONPlaceholder](https://jsonplaceholder.typicode.com/) (mock API)
+- **Package Manager:** Yarn
+
+---
+
+## ✅ Features
+
+### 1. 🔐 Authentication
+- Login and registration pages.
+- JWT token stored securely in `localStorage`.
+- Custom `useAuth` hook to:
+  - Manage login, logout, and user state.
+  - Redirect unauthorized users from protected routes.
+
+### 2. 📝 Blog Post Management (CRUD)
+- Dashboard displays paginated list of posts.
+- Create, Edit, and Delete blog posts.
+- Custom `usePosts` hook handles:
+  - Fetching posts from API.
+  - Add, Update, Delete operations.
+- Real-time UI updates after any CRUD action.
+
+### 3. 🔒 Protected Routes
+- `dashboard`, `create`, and `edit` pages are accessible only after login.
+- Unauthorized users are redirected to login page.
+- Implemented using `useAuth` and protected route logic.
+
+---
+
+## 🌟 Bonus Features
+
+- ✅ **Form Validation** (Custom with live validation feedback)
+- ✅ **Pagination** (Always maintains 10 posts per page, even after deletion)
+- ✅ **Persistent Auth** using `localStorage`
+- ✅ **Responsive Design** with modern UI and UX practices
+- ✅ **Clean Code Structure** with reusable components and hooks
+
+---
+
+---
+
+## 🧪 How to Run Locally
 
 ```bash
-npm run dev
-# or
+# Clone the repo
+git clone https://github.com/manoj2244/blog-nextjs.git
+cd blog-nextjs
+
+# Install dependencies
+yarn
+
+# Run the app
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
